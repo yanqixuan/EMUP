@@ -1,0 +1,26 @@
+const app = getApp()
+Page({
+  data:{
+    headImgUrl:['https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+    'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+    'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'],
+    titleTabBar:[
+      {
+        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+        text:'9.9元起'
+      },
+      {
+        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+        text:'新品卧谈会'
+      },
+      {
+        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+        text:'大家都在买'
+      },
+      {
+        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+        text:'手办大本营'
+      }
+    ]
+  }
+})

@@ -1,0 +1,44 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="title">
+    <swiper indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="{{true}}" circular="{{true}}">
+      <block wx:for="{{headImgUrl}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="title-tabBar">
+      <view class="title-tabBar-item" wx:for="{{titleTabBar}}" wx:key="{{index}}">
+        <view>
+          <image src="{{item.img}}" />
+        </view>
+        <block>{{item.text}}</block>
+      </view>
+    </view>
+    <!-- 秒杀栏 -->
+    <view class="title-ms">
+      <view class="title-ms_head">
+        <view>秒杀中</view>
+        <view class="title-ms_head_time"></view>
+      </view>
+      <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="标签 1">内容 1</van-tab>
+        <van-tab title="标签 2">内容 2</van-tab>
+        <van-tab title="标签 3">内容 3</van-tab>
+        <van-tab title="标签 4">内容 4</van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <!-- 底部导航栏 -->
+  <view class="tabBar">
+    <view class="title-button">
+      <van-tabbar active="{{ active }}" bind:change="onChange">
+        <van-tabbar-item icon="home-o">标签</van-tabbar-item>
+        <van-tabbar-item icon="search" dot>标签</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" info="5">标签</van-tabbar-item>
+        <van-tabbar-item icon="setting-o" info="20">标签</van-tabbar-item>
+      </van-tabbar>
+    </view>
+  </view>
+</view>
