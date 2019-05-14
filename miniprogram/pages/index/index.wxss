@@ -19,3 +19,17 @@
   width: 100rpx;
   height: 100rpx;
 }
+
+.ms-scroll{
+  /* display: flex; */
+  /* width: 1500rpx; */
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
+/* .ms-scroll_imgBox{
+  display: inline-block;
+} */
+.ms-scroll image{
+  width: 300rpx;
+  height: 100rpx;
+}
