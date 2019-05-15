@@ -95,6 +95,45 @@ Page({
         name:'T恤',
         num:690
       }
+    ],
+
+    productList:[
+      {
+        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
+        series:'歪瓜出品',
+        name:'白色抽纸',
+        price:9.9
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
+        series:'歪瓜出品',
+        name:'白色抽纸',
+        price:9.9
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
+        series:'歪瓜出品',
+        name:'白色抽纸',
+        price:9.9
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
+        series:'歪瓜出品',
+        name:'白色抽纸',
+        price:9.9
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
+        series:'歪瓜出品',
+        name:'白色抽纸',
+        price:9.9
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
+        series:'歪瓜出品',
+        name:'白色抽纸',
+        price:9.9
+      },
     ]
   }
 })

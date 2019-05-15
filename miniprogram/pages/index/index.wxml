@@ -1,6 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="title">
+    <van-search class="search" shape="round" input-align="center" value="{{}}" placeholder="搜索商品，5000多款好物" />
     <swiper indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="{{true}}" circular="{{true}}">
       <block wx:for="{{headImgUrl}}" wx:key="{{index}}">
         <swiper-item>
@@ -28,8 +29,10 @@
         <van-tab title="标签 3">内容 3</van-tab> -->
         <van-tab class="ms-van-tab" wx:for="{{msTitle}}" wx:for-item="item" title="{{item.time}}" wx:key="{{index}}">
           <scroll-view class="ms-scroll" scroll-x="{{true}}">
-            <block class="ms-scroll_imgBox" wx:for="{{item.img}}" wx:key="{{index}}" wx:for-item="items">
+            <block class="ms-scroll-Box" wx:for="{{item.img}}" wx:key="{{index}}" wx:for-item="items">
               <image src="{{items}}" />
+              <!-- <view class="ms-scroll-Box-name">{{}}</view> -->
+              <!-- <view class="ms-scroll-Box-price">{{}}</view> -->
             </block>
           </scroll-view>
         </van-tab>
@@ -79,11 +82,15 @@
     <!-- 随心看看 -->
     <view class="productLook">
       <text class="productLook-title">随心看看</text>
-      <view class="productLook-item" wx:for="{{}}" wx:key="index">
-        <view class="productLook-item-pic">{{}}</view>
-        <view class="productLook-item-series">{{}}</view>
-        <view class="productLook-item-name">{{}}</view>
-        <view class="productLook-item-price">￥{{}}</view>
+      <view class="productLook-item" >
+        <view class="productLook-item-box" wx:for="{{productList}}" wx:key="index">
+          <view class="productLook-item-pic">
+            <image src="{{item.img}}" />
+          </view>
+          <view class="productLook-item-series">{{item.series}}</view>
+          <view class="productLook-item-name">{{item.name}}</view>
+          <view class="productLook-item-price">￥{{item.price}}</view>
+        </view>
       </view>
     </view>
   </view>
