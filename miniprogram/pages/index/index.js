@@ -97,6 +97,27 @@ Page({
       }
     ],
 
+    goodProductList:[
+      {
+        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
+      },
+    ],
+
     productList:[
       {
         img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
