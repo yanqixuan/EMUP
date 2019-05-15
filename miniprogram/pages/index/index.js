@@ -27,7 +27,7 @@ Page({
       {
         time:'7:00',
         img:[
-              'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+              '//p.qpic.cn/qqumall/0/15512313075c75e94b42052.png/0',
               'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
               'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
               'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
@@ -53,5 +53,48 @@ Page({
         ]
       }
     ],
+
+    hotGroup:[
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      },
+      {
+        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
+        name:'T恤',
+        num:690
+      }
+    ]
   }
 })

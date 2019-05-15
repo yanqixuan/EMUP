@@ -36,7 +36,56 @@
       </van-tabs>
     </view>
     <!-- 热门分类 -->
-    <view class="hot"></view>
+    <view class="hot">
+      <view class="hot-title">热门分类</view>
+      <view>
+        <scroll-view class="hot-scroll" scroll-x="{{true}}">
+          <view class="hot-item" wx:for="{{hotGroup}}" wx:key="index">
+            <view class="hot-item-pic">
+              <image src="{{item.img}}" />
+            </view>
+            <view class="hot-item-text">
+              <text>{{item.name}}
+              {{item.num}}款</text>
+            </view>
+          </view>
+          <view class="hot-item">
+            <view class="hot-item-pic">
+              <view class="cn">查看更多</view>
+              <view class="en">MORE</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="hot-more">查看更多></view>
+    </view>
+    <!-- 精选商品 -->
+    <view class="goodProduct">
+      <view class="goodProduct-title">
+        <text class="goodProduct-title_text">
+          精选商品
+          <text class="goodProduct-title_text_small">惊喜已经为你打包好</text>
+        </text>
+      </view>
+      <view class="goodProduct-list">
+        <view class="goodProduct-list-item" wx:for="{{}}" wx:key="index">
+          <image src="{{}}" />
+          <text class="goodProduct-list-item_name">{{}}
+            ￥{{}}</text>
+        </view>
+      </view>
+      <view class="hot-more">查看更多></view>
+    </view>
+    <!-- 随心看看 -->
+    <view class="productLook">
+      <text class="productLook-title">随心看看</text>
+      <view class="productLook-item" wx:for="{{}}" wx:key="index">
+        <view class="productLook-item-pic">{{}}</view>
+        <view class="productLook-item-series">{{}}</view>
+        <view class="productLook-item-name">{{}}</view>
+        <view class="productLook-item-price">￥{{}}</view>
+      </view>
+    </view>
   </view>
   <!-- 底部导航栏 -->
   <view class="tabBar">
