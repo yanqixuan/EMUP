@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/group/index",
+    "pages/cart/index",
+    "pages/user/index"
   ],
   "cloud":true,
   "window": {
@@ -9,6 +12,39 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "鹅漫U品",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color":"b7b7b7",
+    "selectedColor":"#FFC03A",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "selectedindex": 1,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/group/index",
+        "iconPath": "images/group.png",
+        "selectedIconPath": "images/group-active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart-active.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-active.png",
+        "text": "个人中心"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
