@@ -8,18 +8,86 @@ Page({
     leftList:[
       {
         name:'',
-        list:["推荐"]
+        list:[
+          {
+            title:"推荐",
+            id:"tuijian"
+          }
+        ]
       },
       {
         name:"作品",
         list:[
-          "影视","形象","动漫","文化","潮流/综艺","游戏"
+          {
+            title:"影视",
+            id:"yinshi"
+          },
+          {
+            title:"形象",
+            id:"xingxiang"
+          },
+          {
+            title:"动漫",
+            id:"dongman"
+          },
+          {
+            title:"文化",
+            id:"wenhua"
+          },
+          {
+            title:"潮流/综艺",
+            id:"chaoliu"
+          },
+          {
+            title:"游戏",
+            id:"youxi"
+          }
         ]
       },
       {
         name:"商品",
         list:[
-          "男女服饰","数码配件","生活家居","鞋帽配饰","玩具手办","箱包收纳","首饰配件","美妆个护","休闲食品","文体图书"
+          {
+            title:"男女服饰",
+            id:"nannvfushi"
+          },
+          {
+            title:"数码配件",
+            id:"shumapeijian"
+          },
+          {
+            title:"生活家居",
+            id:"shenghuojiaju"
+          },
+          {
+            title:"鞋帽配饰",
+            id:"xiemaopeoshi"
+          },
+          {
+            title:"玩具手办",
+            id:"wanjushouban"
+          },
+          {
+            title:"箱包收纳",
+            id:"xiangbaoshouna"
+          },
+          {
+            title:"首饰配件",
+            id:"shoushipeijian"
+          },
+          {
+            title:"美妆个护",
+            id:"meizhuanggehu"
+          },
+          {
+            title:"休闲食品",
+            id:"xiuxianshipin"
+          },
+          {
+            title:"文体图书",
+            id:"wentitushu"
+          },
+
         ]
       }
     ],
@@ -67,6 +135,47 @@ Page({
           {
             img:'https://p.qpic.cn/qqumall/0/15542058905ca34cc243426.png/0',
             name:'U形枕'
+          },
+        ]
+      },
+      {
+        title:"影视",
+        list:[
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
+          },
+          {
+            img:'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
+            name:'怪奇鹅'
           }
         ]
       }

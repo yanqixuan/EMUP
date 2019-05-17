@@ -4,8 +4,8 @@
     <scroll-view class="scrollLeft" scroll-y="{{true}}">
       <view class="leftList" wx:for="{{leftList}}" wx:key="index">
         <view class="leftList-name">{{item.name}}</view>
-        <view class="leftList-list " wx:for="{{item.list}}" wx:key="listIndex" wx:for-item="itemList">
-          {{itemList}}
+        <view class="leftList-list " wx:for="{{item.list}}" wx:key="listIndex" wx:for-item="itemList" data-id="{{}}" data-index="{{index}}">
+          {{itemList.title}}
         </view>
       </view>
     </scroll-view>
