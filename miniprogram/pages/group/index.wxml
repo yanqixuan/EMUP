@@ -1,2 +1,27 @@
-<!--miniprogram/pages/group/index.wxml-->
-<text>miniprogram/pages/group/index.wxml</text>
+<view class="main">
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+  <view class="left">
+    <scroll-view class="scrollLeft" scroll-y="{{true}}">
+      <view class="leftList" wx:for="{{leftList}}" wx:key="index">
+        <view class="leftList-name">{{item.name}}</view>
+        <view class="leftList-list " wx:for="{{item.list}}" wx:key="listIndex" wx:for-item="itemList">
+          {{itemList}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="right">
+    <scroll-view class="scrollRight" scroll-y="{{true}}">
+      <view class="titlePic"></view>
+      <view class="rightList" wx:for="{{rightList}}" wx:key="index">
+        <view class="rightList-name">{{item.title}}</view>
+        <view class="rightList-list">
+          <view class="rightList-list-product" wx:for="{{item.list}}" wx:key="itemIndex" wx:for-item="itemList">
+            <image src="{{itemList.img}}" />
+            <h5 >{{itemList.name}}</h5>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

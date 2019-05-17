@@ -1,7 +1,7 @@
 {
-  "pages": [
+  "pages": ["pages/group/index",
     "pages/index/index",
-    "pages/group/index",
+    
     "pages/cart/index",
     "pages/user/index"
   ],
@@ -45,6 +45,9 @@
         "text": "个人中心"
       }
     ]
+  },
+  "usingComponents":{
+    "van-search": "pages/dist/search/index"
   },
   "sitemapLocation": "sitemap.json"
 }

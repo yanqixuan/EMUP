@@ -1,1 +1,51 @@
-/* miniprogram/pages/group/index.wxss */
+.left{
+    position: absolute;
+    width: 200rpx;
+    font-size: 34rpx;
+}
+.scrollLeft{
+    height: 1000rpx;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+
+
+.leftList{
+    text-align: center;
+    align-items: center;
+}
+.leftList-name{
+    padding: 5rpx;
+    margin: 15rpx 20rpx;
+    background-color: #bfbfbf;
+}
+.leftList:first-child .leftList-name{
+    padding: 0;
+    margin: 0;
+}
+.leftList-list{
+    padding: 20rpx;
+}
+
+/* 右侧 */
+.right{
+    float: right;
+    width: 550rpx;
+    /* margin-left: 200rpx; */
+}
+.rightList-list{
+    /* width: 550rpx; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.rightList-list-product{
+    width: 180rpx;
+}
+.rightList-list image{
+    display: block;
+    width: 120rpx;
+    height: 190rpx;
+}

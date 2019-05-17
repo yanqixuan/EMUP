@@ -3,7 +3,6 @@
     "van-tabbar":"../dist/tabbar/index",
     "van-tabbar-item": "../dist/tabbar-item/index",
     "van-tab": "../dist/tab/index",
-    "van-tabs": "../dist/tabs/index",
-    "van-search": "../dist/search/index"
+    "van-tabs": "../dist/tabs/index"
   }
 }
