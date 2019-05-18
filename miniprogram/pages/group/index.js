@@ -6,7 +6,7 @@ Page({
    */
   data: {
     toView: "",
-    curId: "  ",
+    curId: "",
     leftList: [
       {
         name: '',
@@ -212,24 +212,18 @@ Page({
     // console.log(this.data.curId,event.target.dataset.id,this.data.leftList);
   },
   scrollTab(event) {
-    console.log(event);
+    // console.log(event);
     let st = event.detail.scrollTop
-    console.log(st)
-    switch (st) {
-      case st > 396:
-        this.setData({
-          curId: "yinshi"
-        })
-        console.log(this.data.curId)
-        break;
-      case st >= 0:
-        this.setData({
-          curId: "tuijian"
-        })
-        break;
-
-      default:
-        break;
+    // console.log(st)
+    if(st>396)
+    {
+      this.setData({
+        curId: "yinshi"
+      })
+    } else if(st>0) {
+      this.setData({
+        curId: 'tuijian'
+      })
     }
   },
   /**
@@ -250,7 +244,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      curId:'tuijian'
+    })
   },
 
   /**
