@@ -3,7 +3,7 @@ Page{
     height: 100%;
 }
 .container{
-    background-color: #bfbfbf;
+    background-color: #eeeded;
 }
 .cart{
     display: flex;

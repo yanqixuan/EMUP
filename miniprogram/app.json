@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/user/index",
     "pages/cart/index",
     "pages/group/index",
-    "pages/index/index",
-    "pages/user/index"
+    "pages/index/index"
+    
   ],
   "cloud":true,
   "window": {

@@ -1,2 +1,30 @@
-<!--miniprogram/pages/user/index.wxml-->
-<text>miniprogram/pages/user/index.wxml</text>
+<view class="container">
+  <view class="title">
+    <view class="title-userinfo">
+      <view class="title-uesrhead"></view>
+      <view class="title-username"></view>
+      <view class="title-vip">了解SVIP鹅漫特权</view>
+    </view>
+  </view>
+  <view class="order">
+    <view class="myorder" bind:tap="">我的订单</view>
+    <view class="myorder-lists">
+      <view class="myorder-list" wx:for="{{order}}" wx:key="index">
+        <image src="{{item.src}}" />
+        <view>{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="other-lists">
+    <view wx:for="{{otherLists}}" wx:key="index" class="other-list">
+      <image class="other-list-image" src="{{item.src}}" />
+      <view class="other-list-title">{{item.title}}</view>
+    </view>
+  </view>
+  <view class="other-lists">
+    <view wx:for="{{helpLists}}" wx:key="index" class="other-list">
+      <image class="other-list-image" src="{{item.src}}" />
+      <view class="other-list-title">{{item.title}}</view>
+    </view>
+  </view>
+</view>
