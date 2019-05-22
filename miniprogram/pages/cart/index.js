@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    products:[]
   },
   go(){
     wx.switchTab({
@@ -16,7 +16,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ce49f32d66f474c5b3a024e/emup/cart',
+      data: {},
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result)=>{
+        console.log(result)
+        this.setData({
+          products:result.data.data.products
+        })
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   },
 
   /**

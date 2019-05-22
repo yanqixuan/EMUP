@@ -38,3 +38,33 @@ Page{
     line-height: 100rpx;
     height: 100rpx;
 }
+.recommend-productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.recommend-product{
+    flex: 50%;
+    width: 320rpx;
+    padding-bottom: 30rpx;
+}
+.recommend-product image{
+    height: 360rpx;
+    width: 360rpx;
+    /* flex: 50%; */
+}
+.recommend-info{
+    text-align: left;
+}
+.recommend-name{
+    white-space: nowrap;
+    /* line-clamp: 1; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.foot{
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 30rpx;
+}

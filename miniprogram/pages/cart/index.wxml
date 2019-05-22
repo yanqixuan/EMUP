@@ -1,13 +1,27 @@
 <view class="container">
-    <view class="cart">
-        <view wx:if="{{!cartProduct}}" class="empty">
-                <view class="empty-text">空空如也的购物车，惆怅~</view>
-                <view class="empty-button" bind:tap="go">去逛逛</view>
-        </view>
+  <view class="cart">
+    <view wx:if="{{!cartProduct}}" class="empty">
+      <view class="empty-text">空空如也的购物车，惆怅~</view>
+      <view class="empty-button" bind:tap="go">去逛逛</view>
     </view>
-    <view class="recommend">
-        <view class="recommend-title">
-            <text>为你推荐</text>
-        </view>
+  </view>
+  <view class="recommend">
+    <view class="recommend-title">
+      <text>为你推荐</text>
     </view>
+    <view class="recommend-productList">
+      <view class="recommend-product" wx:for="{{products}}" wx:key="index">
+        <image src="{{item.src}}" />
+        <view class="recommend-info">
+          <view class="recommend-name">{{item.name}}</view>
+          <view>￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="foot-content">
+      —— 全部加载完毕啦 (*/ω＼*) ——
+    </view>
+  </view>
 </view>

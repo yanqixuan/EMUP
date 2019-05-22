@@ -12,7 +12,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var reqTask = wx.request({
+      url: 'https://www.easy-mock.com/mock/5ce49f32d66f474c5b3a024e/emup/',
+      header: { 'content-type': 'application/json' },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result) => {
+        console.log(result)
+      },
+      fail: () => { },
+      complete: () => { }
+    });
   },
 
   /**
