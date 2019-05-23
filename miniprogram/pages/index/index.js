@@ -2,163 +2,34 @@ const app = getApp()
 Page({
   data:{
     inputShowed:false,
-    headImgUrl:['https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-    'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-    'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'],
-    titleTabBar:[
-      {
-        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        text:'9.9元起'
-      },
-      {
-        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        text:'新品卧谈会'
-      },
-      {
-        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        text:'大家都在买'
-      },
-      {
-        img:'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        text:'手办大本营'
-      }
-    ],
-
-    msTitle:[
-      {
-        time:'7:00',
-        img:[
-              '//p.qpic.cn/qqumall/0/15512313075c75e94b42052.png/0',
-              'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-              'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-              'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-            ]
-      },
-      {
-        time:'13:00',
-        img:[
-          'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-          'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-          'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-          'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-        ]
-      },
-      {
-        time:'20:00',
-        img:[
-          'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-          'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-          'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-          'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-          
-        ]
-      }
-    ],
-
-    hotGroup:[
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15478093005c41b2141f505.png/0',
-        name:'T恤',
-        num:690
-      }
-    ],
-
-    goodProductList:[
-      {
-        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15565232835cc6a913b9c47.jpg/0',
-      },
-    ],
-
-    productList:[
-      {
-        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
-        series:'歪瓜出品',
-        name:'白色抽纸',
-        price:9.9
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
-        series:'歪瓜出品',
-        name:'白色抽纸',
-        price:9.9
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
-        series:'歪瓜出品',
-        name:'白色抽纸',
-        price:9.9
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
-        series:'歪瓜出品',
-        name:'白色抽纸',
-        price:9.9
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
-        series:'歪瓜出品',
-        name:'白色抽纸',
-        price:9.9
-      },
-      {
-        img:'//p.qpic.cn/qqumall/0/15407784785bd669ee88f79.jpg/0',
-        series:'歪瓜出品',
-        name:'白色抽纸',
-        price:9.9
-      },
-    ]
+    headImgUrl:[],
+    titleTabBar:[],
+    msTitle:[],
+    hotGroup:[],
+    goodProductList:[],
+    productList:[]
   },
-  showInput(){
-
+  onLoad(){
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ce49f32d66f474c5b3a024e/emup/index',
+      data: {},
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result)=>{
+        this.setData({
+          inputShowed:result.data.data.inputShowed,
+          headImgUrl:result.data.data.headImgUrl,
+          titleTabBar:result.data.data.titleTabBar,
+          msTitle:result.data.data.msTitle,
+          hotGroup:result.data.data.hotGroup,
+          goodProductList:result.data.data.goodProductList,
+          productList:result.data.data.productList,
+        })
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   }
 })

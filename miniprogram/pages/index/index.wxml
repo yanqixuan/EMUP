@@ -44,15 +44,10 @@
         <view class="title-ms_head_time"></view>
       </view>
       <van-tabs active="{{ active }}" bind:change="onChange">
-        <!-- <van-tab title="标签 1">内容 1</van-tab>
-        <van-tab title="标签 2">内容 2</van-tab>
-        <van-tab title="标签 3">内容 3</van-tab> -->
         <van-tab class="ms-van-tab" wx:for="{{msTitle}}" wx:for-item="item" title="{{item.time}}" wx:key="{{index}}">
           <scroll-view class="ms-scroll" scroll-x="{{true}}">
             <view class="ms-scroll-Box" wx:for="{{item.img}}" wx:key="{{index}}" wx:for-item="items">
               <image src="{{items}}" />
-              <!-- <view class="ms-scroll-Box-name">{{}}</view> -->
-              <!-- <view class="ms-scroll-Box-price">{{}}</view> -->
             </view>
           </scroll-view>
         </van-tab>
@@ -94,8 +89,8 @@
       <view class="goodProduct-list">
         <view class="goodProduct-list-item" wx:for="{{goodProductList}}" wx:key="index">
           <image src="{{item.img}}" />
-          <text class="goodProduct-list-item_name">{{}}
-            ￥{{}}</text>
+          <text class="goodProduct-list-item_name">{{item.name}}
+            ￥{{item.price}}6</text><van-tag color="#F2302F">标签</van-tag>
         </view>
       </view>
       <view class="hot-more">查看更多></view>

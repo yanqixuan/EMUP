@@ -1,8 +1,6 @@
 .title{
-  /* position: absolute; */
   width: 100%;
   height: 500rpx;
-  /* position: relative; */
 }
 .weui-search-bar{
   position: absolute;
@@ -11,14 +9,11 @@
 }
 .weui-search-bar__box{
   background-color: rgba(0,0,0,0);
-  /* z-index: 10; */
 }
 .weui-search-bar__label{
-  /* background-color: rgba(0,0,0,0.5); */
   opacity: .4;
   border-radius:100rpx;
   background-color: #fff;
-  /* z-index: 10; */
 }
 .title-tabBar{
   padding-top: 20rpx;
@@ -95,6 +90,9 @@
   line-height: 70rpx;
 }
 /* 精选商品 */
+van-tag{
+  display: inline-block;
+}
 .goodProduct-title{
   padding-top: 20rpx;
   padding-bottom: 20rpx;
@@ -120,6 +118,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.goodProduct-list-item{
+  vertical-align: middle;
+}
+.goodProduct-list-item_name{
+  vertical-align: middle;
 }
 .goodProduct-list-item image{
   width: 240rpx;
