@@ -7,7 +7,42 @@ Page({
     msTitle:[],
     hotGroup:[],
     goodProductList:[],
-    productList:[]
+    productList:[],
+    active:0,
+    hour:0,
+    minute:0,
+    second:0
+  },
+  time(){
+    let now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+    if(h<7){
+      this.setData({
+        active:2,
+        hour:h-20-1,
+        minute:60-m,
+        second:60-s
+      })
+    } else if (h<13){
+      this.setData({
+        active:0,
+        hour:h-7-1,
+        minute:60-m,
+        second:60-s
+      })
+    } else if (h<20){
+      this.setData({
+        active:1,
+        hour:h-13-1,
+        minute:60-m,
+        second:60-s
+      })
+    }
+
+    console.log(now.getTime());
+    console.log(now.getMinutes());
   },
   onLoad(){
     wx.request({
@@ -31,5 +66,6 @@ Page({
       fail: ()=>{},
       complete: ()=>{}
     });
+    this.time();
   }
 })

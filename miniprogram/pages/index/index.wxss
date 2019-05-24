@@ -51,10 +51,17 @@
   /* border: 1px solid #000; */
   /* box-sizing: border-box; */
   padding-right: 10rpx;
+  width: 220rpx;
 }
 .ms-scroll image{
   width: 200rpx;
   height: 200rpx;
+}
+.ms-scroll-Box-name{
+    white-space: nowrap;
+    /* line-clamp: 1; */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* 热门分类 */

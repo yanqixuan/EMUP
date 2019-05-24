@@ -41,13 +41,15 @@
     <view class="title-ms">
       <view class="title-ms_head">
         <view>秒杀中</view>
-        <view class="title-ms_head_time"></view>
+        <view class="title-ms_head_time"><span>{{hour}}</span>:<span>{{minute}}</span>:<span></span>{{second}}</view>
       </view>
-      <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tabs active="{{active}}" bind:change="onChange">
         <van-tab class="ms-van-tab" wx:for="{{msTitle}}" wx:for-item="item" title="{{item.time}}" wx:key="{{index}}">
           <scroll-view class="ms-scroll" scroll-x="{{true}}">
-            <view class="ms-scroll-Box" wx:for="{{item.img}}" wx:key="{{index}}" wx:for-item="items">
-              <image src="{{items}}" />
+            <view class="ms-scroll-Box" wx:for="{{item.product}}" wx:key="{{index}}" wx:for-item="items">
+              <image src="{{items.img}}" />
+              <view class="ms-scroll-Box-name">{{items.name}}</view>
+              <view >￥{{items.price}}<van-tag color="#F2302F">秒杀</van-tag><span>￥{{items.oldPrice}}</span></view>
             </view>
           </scroll-view>
         </van-tab>
@@ -110,15 +112,4 @@
       </view>
     </view>
   </view>
-  <!-- 底部导航栏 -->
-  <!-- <view class="tabBar">
-    <view class="title-button">
-      <van-tabbar active="{{ active }}" active-color="#FFC03A" bind:change="onChange">
-        <van-tabbar-item icon="wap-home">首页</van-tabbar-item>
-        <van-tabbar-item icon="bars">分类</van-tabbar-item>
-        <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
-        <van-tabbar-item icon="contact">个人中心</van-tabbar-item>
-      </van-tabbar>
-    </view>
-  </view> -->
 </view>
