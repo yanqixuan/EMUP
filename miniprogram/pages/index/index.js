@@ -15,34 +15,48 @@ Page({
   },
   time(){
     let now = new Date();
-    let h = now.getHours();
-    let m = now.getMinutes();
-    let s = now.getSeconds();
-    if(h<7){
+    // let h = now.getHours();
+    // let m = now.getMinutes();
+    // let s = now.getSeconds();
+    let time = now.getTime();
+    let time1 = now.setHours(7,0,0);
+    let time2 = now.setHours(13,0,0);
+    let time3 = now.setHours(20,0,0);
+    if(time<time1){
+      let hour = (time-time1)/3600000;
+      let minute = (time-hour*3600000)/60000;
+      let second = (time-hour*3600000-minute*60000);
       this.setData({
         active:2,
-        hour:h-20-1,
-        minute:60-m,
-        second:60-s
+        hour,
+        minute,
+        second
       })
-    } else if (h<13){
+    } else if (time<time2){
+      let hour = (time-time1)/3600000;
+      let minute = (time-hour*3600000)/60000;
+      let second = (time-hour*3600000-minute*60000);
       this.setData({
         active:0,
-        hour:h-7-1,
-        minute:60-m,
-        second:60-s
+        hour,
+        minute,
+        second
       })
-    } else if (h<20){
+    } else if (time<time3){
+      let hour = (time-time1)/3600000;
+      let minute = (time-hour*3600000)/60000;
+      let second = (time-hour*3600000-minute*60000);
       this.setData({
         active:1,
-        hour:h-13-1,
-        minute:60-m,
-        second:60-s
+        hour,
+        minute,
+        second
       })
     }
 
     console.log(now.getTime());
     console.log(now.getMinutes());
+    console.log(time1,time2,time3,time);
   },
   onLoad(){
     wx.request({
