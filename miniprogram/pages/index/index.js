@@ -15,17 +15,14 @@ Page({
   },
   time(){
     let now = new Date();
-    // let h = now.getHours();
-    // let m = now.getMinutes();
-    // let s = now.getSeconds();
     let time = now.getTime();
     let time1 = now.setHours(7,0,0);
     let time2 = now.setHours(13,0,0);
     let time3 = now.setHours(20,0,0);
     if(time<time1){
-      let hour = (time-time1)/3600000;
-      let minute = (time-hour*3600000)/60000;
-      let second = (time-hour*3600000-minute*60000);
+      let hour = parseInt((time1-time)/3600000);
+      let minute = parseInt((time1-time-hour*3600000)/60000);
+      let second = parseInt((time1-time-hour*3600000-minute*60000)/1000);
       this.setData({
         active:2,
         hour,
@@ -33,9 +30,9 @@ Page({
         second
       })
     } else if (time<time2){
-      let hour = (time-time1)/3600000;
-      let minute = (time-hour*3600000)/60000;
-      let second = (time-hour*3600000-minute*60000);
+      let hour = parseInt((time2-time)/3600000);
+      let minute = parseInt((time2-time-hour*3600000)/60000);
+      let second = parseInt((time2-time-hour*3600000-minute*60000)/1000);
       this.setData({
         active:0,
         hour,
@@ -43,9 +40,9 @@ Page({
         second
       })
     } else if (time<time3){
-      let hour = (time-time1)/3600000;
-      let minute = (time-hour*3600000)/60000;
-      let second = (time-hour*3600000-minute*60000);
+      let hour = parseInt((time3-time)/3600000);
+      let minute = parseInt((time3-time-hour*3600000)/60000);
+      let second = parseInt((time3-time-hour*3600000-minute*60000)/1000);
       this.setData({
         active:1,
         hour,
