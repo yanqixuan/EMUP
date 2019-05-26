@@ -32,6 +32,17 @@
   height: 100rpx;
 }
 /* 秒杀栏样式 */
+.title-ms_head{
+  text-align: center;
+}
+/* .title-ms_head_time{
+
+} */
+.timer{
+  margin: 20rpx;
+ color: #F2302F;
+ background-color: #f7f7f7;
+}
 .ms-van-tab{
   box-sizing: border-box;
   /* margin-left: 10rpx; */

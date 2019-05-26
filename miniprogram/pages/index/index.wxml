@@ -41,7 +41,7 @@
     <view class="title-ms">
       <view class="title-ms_head">
         <view>秒杀中</view>
-        <view class="title-ms_head_time"><span>{{hour}}</span>:<span>{{minute}}</span>:<span></span>{{second}}</view>
+        <view class="title-ms_head_time"><span class="timer"><span wx:if="{{hour<10}}">0</span>{{hour}}</span>:<span class="timer"><span wx:if="{{minute<10}}">0</span>{{minute}}</span>:<span class="timer"><span wx:if="{{second<10}}">0</span>{{second}}</span></view>
       </view>
       <van-tabs active="{{active}}" bind:change="onChange">
         <van-tab class="ms-van-tab" wx:for="{{msTitle}}" wx:for-item="item" title="{{item.time}}" wx:key="{{index}}">

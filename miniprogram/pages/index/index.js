@@ -77,6 +77,8 @@ Page({
       fail: ()=>{},
       complete: ()=>{}
     });
-    this.time();
+    setInterval(() => {
+      this.time();
+    }, 1000);
   }
 })
