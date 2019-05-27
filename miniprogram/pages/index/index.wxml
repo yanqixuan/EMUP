@@ -1,47 +1,61 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="title">
-    
     <view class="page__bd">
-        <view class="weui-search-bar">
-            <view class="weui-search-bar__form">
-                <view class="weui-search-bar__box" >
-                    <!-- <icon class="weui-icon-search_in-box" type="search" size="14"></icon> -->
-                    <input type="text" class="weui-search-bar__input" placeholder="" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
-                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-                        <icon type="clear" size="14"></icon>
-                    </view>
-                </view>
-                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-                    <icon class="weui-icon-search" type="search" size="14"></icon>
-                    <view class="weui-search-bar__text">搜索商品，5000多款好物</view>
-                </label>
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <!-- <icon class="weui-icon-search_in-box" type="search" size="14"></icon> -->
+            <input type="text" class="weui-search-bar__input" placeholder="" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
             </view>
-            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+          </view>
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索商品，5000多款好物</view>
+          </label>
         </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">
+          取消
+        </view>
+      </view>
     </view>
-
-    <!-- <van-search class="search" shape="round" input-align="center" value="{{}}" placeholder="搜索商品，5000多款好物" /> -->
-    <swiper indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="{{true}}" circular="{{true}}">
-      <block wx:for="{{headImgUrl}}" wx:key="{{index}}">
-        <swiper-item>
-          <image src="{{item}}" />
-        </swiper-item>
-      </block>
-    </swiper>
-    <view class="title-tabBar">
-      <view class="title-tabBar-item" wx:for="{{titleTabBar}}" wx:key="{{index}}">
-        <view>
-          <image src="{{item.img}}" />
+    <view class="head">
+      <!-- <van-search class="search" shape="round" input-align="center" value="{{}}" placeholder="搜索商品，5000多款好物" /> -->
+      <swiper indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="{{true}}" circular="{{true}}">
+        <block wx:for="{{headImgUrl}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="title-tabBar">
+        <view class="title-tabBar-item" wx:for="{{titleTabBar}}" wx:key="{{index}}">
+          <view>
+            <image src="{{item.img}}" />
+          </view>
+          <block>{{item.text}}</block>
         </view>
-        <block>{{item.text}}</block>
       </view>
     </view>
     <!-- 秒杀栏 -->
     <view class="title-ms">
       <view class="title-ms_head">
         <view>秒杀中</view>
-        <view class="title-ms_head_time"><span class="timer"><span wx:if="{{hour<10}}">0</span>{{hour}}</span>:<span class="timer"><span wx:if="{{minute<10}}">0</span>{{minute}}</span>:<span class="timer"><span wx:if="{{second<10}}">0</span>{{second}}</span></view>
+        <view class="title-ms_head_time">
+          <span class="timer">
+            <span wx:if="{{hour<10}}">0</span>{{hour}}
+          </span>
+          :
+          <span class="timer">
+            <span wx:if="{{minute<10}}">0</span>{{minute}}
+          </span>
+          :
+          <span class="timer">
+            <span wx:if="{{second<10}}">0</span>{{second}}
+          </span>
+        </view>
       </view>
       <van-tabs active="{{active}}" bind:change="onChange">
         <van-tab class="ms-van-tab" wx:for="{{msTitle}}" wx:for-item="item" title="{{item.time}}" wx:key="{{index}}">
@@ -49,7 +63,11 @@
             <view class="ms-scroll-Box" wx:for="{{item.product}}" wx:key="{{index}}" wx:for-item="items">
               <image src="{{items.img}}" />
               <view class="ms-scroll-Box-name">{{items.name}}</view>
-              <view >￥{{items.price}}<van-tag color="#F2302F">秒杀</van-tag><span>￥{{items.oldPrice}}</span></view>
+              <view>
+                ￥{{items.price}}
+                <van-tag color="#F2302F">秒杀</van-tag>
+                <span class="ms-oldPrice">￥{{items.oldPrice}}</span>
+              </view>
             </view>
           </scroll-view>
         </van-tab>
@@ -58,7 +76,7 @@
     <!-- 热门分类 -->
     <view class="hot">
       <view class="hot-title">热门分类</view>
-      <view>
+      <view class="hot-list">
         <scroll-view class="hot-scroll" scroll-x="{{true}}">
           <view class="hot-item" wx:for="{{hotGroup}}" wx:key="index">
             <view class="hot-item-pic">
@@ -84,15 +102,17 @@
     <!-- 精选商品 -->
     <view class="goodProduct">
       <view class="goodProduct-title">
-          <text class="goodProduct-title_text">精选商品
-            <text class="goodProduct-title_text_small">惊喜已经为你打包好</text>
-          </text>
+        <text class="goodProduct-title_text">精选商品
+          <text class="goodProduct-title_text_small">惊喜已经为你打包好</text>
+        </text>
       </view>
       <view class="goodProduct-list">
         <view class="goodProduct-list-item" wx:for="{{goodProductList}}" wx:key="index">
           <image src="{{item.img}}" />
           <text class="goodProduct-list-item_name">{{item.name}}
-            ￥{{item.price}}6</text><van-tag color="#F2302F">标签</van-tag>
+            ￥{{item.price}}6
+          </text>
+          <van-tag color="#F2302F">标签</van-tag>
         </view>
       </view>
       <view class="hot-more">查看更多></view>
