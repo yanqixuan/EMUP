@@ -49,6 +49,17 @@ Page({
         minute,
         second
       })
+    } else{
+      time1 += 24*3600000;
+      let hour = parseInt((time1 - time) / 3600000);
+      let minute = parseInt((time1 - time - hour * 3600000) / 60000);
+      let second = parseInt((time1 - time - hour * 3600000 - minute * 60000) / 1000);
+      this.setData({
+        // active: 2,
+        hour,
+        minute,
+        second
+      })
     }
 
     // console.log(now.getTime());
