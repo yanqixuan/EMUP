@@ -1,0 +1,55 @@
+<view class="container">
+    <view class="header">
+        <view class="swiper">
+            <swiper class="header-swiper" indicator-dots="{{true}}">
+                <swiper-item wx:for="{{}}" wx:key="index"></swiper-item>
+            </swiper>
+        </view>
+        <view class="productInfo">
+            <view class="name"></view>
+            <view class="price"></view><van-tag color="#F2302F">特价</van-tag><view class="oldPrice"></view>
+        </view>
+    </view>
+
+    <view class="info">
+        <view class="postage">{{}}</view>
+        <view class="type">{{}}</view>
+        <view class="server" wx:for="{{}}" wx:key="index"><image src="" />{{}}</view>
+    </view>
+
+    <view class="shop">
+        <view class="pic">{{}}</view>
+        <view class="shop-name">{{}}</view>
+        <view class="shop-info">{{}}</view>
+    </view>
+
+    <view class="evaluate">
+        <view class="evaluate-title">商品评价({{}})</view>
+    </view>
+
+    <view class="promise">
+        <image src="" bind:tap=""/>
+    </view>
+
+    <view class="details">
+        <view class="details-title">商品详情</view>
+    </view>
+
+    <view class="foot">
+        <view class="collection">
+            <image src="" />
+            收藏
+        </view>
+        <view class="cart" bindtap="">
+            <image src="" />
+            购物车
+        </view>
+        <view class="buy">
+            <view wx:if="{{}}">已售空</view>
+            <view wx:if="{{}}">
+                <view class="buy-add" bindtap="">加入购物车</view>
+                <view class="purchase" bind:tap="">立即购买</view>
+            </view>
+        </view>
+    </view>
+</view>

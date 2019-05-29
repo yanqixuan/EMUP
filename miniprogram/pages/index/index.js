@@ -88,6 +88,19 @@ Page({
       })
     }
   },
+  toProduct(e){
+    let id = e.currentTarget.dataset.id;
+    console.log(e)
+    wx.navigateTo({
+      url: '../product/product',
+      success: (result)=>{
+        
+        wx.setStorageSync('id', id);
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
   onLoad() {
     wx.request({
       url: 'https://www.easy-mock.com/mock/5ce49f32d66f474c5b3a024e/emup/index',

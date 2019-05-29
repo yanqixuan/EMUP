@@ -63,7 +63,7 @@
       <van-tabs active="{{active}}" bind:change="onChange">
         <van-tab class="ms-van-tab" wx:for="{{msTitle}}" wx:for-item="item" title="{{item.time}}" wx:key="{{index}}">
           <scroll-view class="ms-scroll" scroll-x="{{true}}">
-            <view class="ms-scroll-Box" wx:for="{{item.product}}" wx:key="{{index}}" wx:for-item="items">
+            <view class="ms-scroll-Box" wx:for="{{item.product}}" wx:key="{{index}}" wx:for-item="items" bindtap="toProduct" data-id="{{items.productID}}">
               <image src="{{items.img}}" />
               <view class="ms-scroll-Box-name">{{items.name}}</view>
               <view>

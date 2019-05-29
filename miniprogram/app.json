@@ -3,11 +3,10 @@
     "pages/index/index",
     "pages/user/index",
     "pages/cart/index",
-    "pages/group/index"
-    
-    
+    "pages/group/index",
+    "pages/product/product"
   ],
-  "cloud":true,
+  "cloud": true,
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -15,9 +14,9 @@
     "navigationBarTitleText": "鹅漫U品",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color":"b7b7b7",
-    "selectedColor":"#FFC03A",
+  "tabBar": {
+    "color": "b7b7b7",
+    "selectedColor": "#FFC03A",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "selectedindex": 1,
@@ -48,7 +47,7 @@
       }
     ]
   },
-  "usingComponents":{
+  "usingComponents": {
     "van-search": "pages/dist/search/index"
   },
   "sitemapLocation": "sitemap.json"
