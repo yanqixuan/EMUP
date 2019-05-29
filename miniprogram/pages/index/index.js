@@ -11,7 +11,8 @@ Page({
     active: 0,
     hour: 0,
     minute: 0,
-    second: 0
+    second: 0,
+    
   },
   time() {
     let now = new Date();

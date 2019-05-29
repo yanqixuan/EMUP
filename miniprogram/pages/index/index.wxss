@@ -5,6 +5,20 @@
 .head{
   border-bottom: 20rpx solid #efefef;
 }
+.name{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.oldPrice{
+  color: #bfbfbf;
+  font-size: 60%;
+  text-decoration-line: line-through;
+}
+.status{
+  font-size: 60%;
+}
+
 .weui-search-bar{
   position: absolute;
   width: 100%;
@@ -134,6 +148,9 @@
 van-tag{
   display: inline-block;
 }
+.goodProduct{
+  border-bottom: 20rpx solid #efefef;
+}
 .goodProduct-title{
   padding-top: 20rpx;
   padding-bottom: 20rpx;
@@ -159,19 +176,39 @@ van-tag{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-width: 0;
 }
 .goodProduct-list-item{
   vertical-align: middle;
+  overflow: hidden;
+  width: 240rpx;
 }
 .goodProduct-list-item_name{
+  /* width: 33.3rpx; */
+  overflow: hidden;
   vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .goodProduct-list-item image{
   width: 240rpx;
   height: 240rpx;
 }
+.goodProduct-list .oldPrice{
+  color: #bfbfbf;
+  font-size: 60%;
+  text-decoration-line: line-through;
+}
+.goodProduct-list .price{
+  height: 50rpx;
+  line-height: 50rpx;
+}
 
 /* 随心看看 */
+.productLook-title{
+  padding: 20rpx 0;
+  text-align: center;
+}
 .productLook-item-pic image{
   height: 320rpx;
   width: 320rpx;
@@ -185,4 +222,5 @@ van-tag{
 }
 .productLook-item-box{
   padding: 24rpx;
+  width: 330rpx;
 }

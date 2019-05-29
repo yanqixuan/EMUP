@@ -45,15 +45,18 @@
         <view>秒杀中</view>
         <view class="title-ms_head_time">
           <span class="timer">
-            <span wx:if="{{hour<10}}">0</span>{{hour}}
+            <span wx:if="{{hour<10}}">0</span>
+            {{hour}}
           </span>
           :
           <span class="timer">
-            <span wx:if="{{minute<10}}">0</span>{{minute}}
+            <span wx:if="{{minute<10}}">0</span>
+            {{minute}}
           </span>
           :
           <span class="timer">
-            <span wx:if="{{second<10}}">0</span>{{second}}
+            <span wx:if="{{second<10}}">0</span>
+            {{second}}
           </span>
         </view>
       </view>
@@ -102,32 +105,41 @@
     <!-- 精选商品 -->
     <view class="goodProduct">
       <view class="goodProduct-title">
-        <text class="goodProduct-title_text">精选商品
+        <text class="goodProduct-title_text">
+          精选商品
           <text class="goodProduct-title_text_small">惊喜已经为你打包好</text>
         </text>
       </view>
       <view class="goodProduct-list">
         <view class="goodProduct-list-item" wx:for="{{goodProductList}}" wx:key="index">
           <image src="{{item.img}}" />
-          <text class="goodProduct-list-item_name">{{item.name}}
-            ￥{{item.price}}6
-          </text>
-          <van-tag color="#F2302F">标签</van-tag>
+          <view class="goodProduct-list-item_name">{{item.name}}</view>
+          <view class="price">
+            <span>{{item.price}}</span>
+            <van-tag color="#F2302F">特价</van-tag>
+            <span class="oldPrice">{{item.oldPrice}}</span>
+          </view>
         </view>
       </view>
       <view class="hot-more">查看更多></view>
     </view>
     <!-- 随心看看 -->
     <view class="productLook">
-      <text class="productLook-title">随心看看</text>
+      <view class="productLook-title">随心看看</view>
       <view class="productLook-item">
         <view class="productLook-item-box" wx:for="{{productList}}" wx:key="index">
           <view class="productLook-item-pic">
             <image src="{{item.img}}" />
           </view>
-          <view class="productLook-item-series">{{item.series}}</view>
-          <view class="productLook-item-name">{{item.name}}</view>
-          <view class="productLook-item-price">￥{{item.price}}</view>
+          <view class="series">{{item.series}}</view>
+          <view class="name">{{item.name}}</view>
+          <!-- price组件 -->
+          <view class="price">
+            <span>{{item.price}}</span>
+            <van-tag color="#F2302F">特价</van-tag>
+            <span class="oldPrice">{{item.oldPrice}}</span>
+          </view>
+          <view class="status">{{item.status}}人已买</view>
         </view>
       </view>
     </view>
