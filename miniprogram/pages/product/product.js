@@ -1,4 +1,7 @@
 // miniprogram/pages/product/product.js
+const db = wx.cloud.database({
+  env:'http-product'
+})
 Page({
 
   /**
@@ -12,8 +15,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let id = wx.getStorageSync('id');
-    console.log(id);
+    // let id = wx.getStorageSync('id');
+    // console.log(id);
+    // console.log(options.id)
+    let that = this;
+    db.collection('productLIst').where({
+      id:options.id
+    })
+    // // console.log(productList);
+    .get({
+      success(res){
+        console.log(res.data)
+      }
+    })
   },
 
   /**

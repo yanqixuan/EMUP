@@ -92,10 +92,10 @@ Page({
     let id = e.currentTarget.dataset.id;
     console.log(e)
     wx.navigateTo({
-      url: '../product/product',
+      url: '../product/product?id='+id,
       success: (result)=>{
         
-        wx.setStorageSync('id', id);
+        // wx.setStorageSync('id', id);
       },
       fail: ()=>{},
       complete: ()=>{}
