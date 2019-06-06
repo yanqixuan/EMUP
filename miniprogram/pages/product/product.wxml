@@ -2,11 +2,13 @@
     <view class="header">
         <view class="swiper">
             <swiper class="header-swiper" indicator-dots="{{true}}">
-                <swiper-item wx:for="{{}}" wx:key="index"></swiper-item>
+                <swiper-item wx:for="{{img}}" wx:key="index">
+                <image src="{{item}}" />
+                </swiper-item>
             </swiper>
         </view>
         <view class="productInfo">
-            <view class="name"></view>
+            <view class="name">{{name}}</view>
             <view class="price"></view><van-tag color="#F2302F">特价</van-tag><view class="oldPrice"></view>
         </view>
     </view>
@@ -20,7 +22,7 @@
     <view class="shop">
         <view class="pic">{{}}</view>
         <view class="shop-name">{{}}</view>
-        <view class="shop-info">{{}}</view>
+        <view class="shop-info">{{}}</view> 
     </view>
 
     <view class="evaluate">
