@@ -9,32 +9,38 @@
         </view>
         <view class="productInfo">
             <view class="name">{{name}}</view>
-            <view class="price"></view><van-tag color="#F2302F">特价</van-tag><view class="oldPrice"></view>
+            <view class="num">{{num}}</view>
+            <view class="price">{{price}}</view><van-tag color="#F2302F">特价</van-tag><view class="oldPrice">{{oldPrice}}</view>
         </view>
     </view>
 
     <view class="info">
-        <view class="postage">{{}}</view>
-        <view class="type">{{}}</view>
-        <view class="server" wx:for="{{}}" wx:key="index"><image src="" />{{}}</view>
+        <view class="postage">{{info.postage}}</view>
+        <view class="type">{{info.type}}</view>
+        <view class="server" wx:for="{{info.server}}" wx:key="index"><image src="" />{{item}}</view>
     </view>
 
     <view class="shop">
-        <view class="pic">{{}}</view>
-        <view class="shop-name">{{}}</view>
-        <view class="shop-info">{{}}</view> 
+        <view class="pic">{{shop.img}}</view>   
+        <view class="shop-name">{{shop.name}}</view>
+        <view class="shop-info">{{shop.introduce}}</view> 
     </view>
 
     <view class="evaluate">
-        <view class="evaluate-title">商品评价({{}})</view>
+        <view class="evaluate-title">商品评价({{evaluate.num}})</view>
+        <view class="evaluate-percent">{{evaluate.percent}}</view>
     </view>
 
     <view class="promise">
-        <image src="" bind:tap=""/>
+        <image src="{{promise.img}}" bind:tap=""/>
     </view>
 
     <view class="details">
         <view class="details-title">商品详情</view>
+        <view class="details-pic" wx:for="{{details}}" wx:key="index">
+            <image src="{{item}}" />
+        </view>
+        <!-- <image class="details-pic" wx:for="{{details}}" wx:key="index" /> -->
     </view>
 
     <view class="foot">
