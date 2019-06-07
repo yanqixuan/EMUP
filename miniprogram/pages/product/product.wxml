@@ -2,7 +2,7 @@
     <view class="header">
         <view class="swiper">
             <swiper class="header-swiper" indicator-dots="{{true}}">
-                <swiper-item wx:for="{{img}}" wx:key="index">
+                <swiper-item class="swiperItem" wx:for="{{img}}" wx:key="index">
                 <image src="{{item}}" />
                 </swiper-item>
             </swiper>
