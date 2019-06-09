@@ -23,13 +23,17 @@
     <view class="postage">邮费 {{info.postage}}</view>
     <view class="postage">已选 {{info.type}}</view>
     <view class="postage server" wx:for="{{info.server}}" wx:key="index">
-      <image src="../../images/dui.png" /> <text > {{item}}</text> 
+      <image src="../../images/dui.png" />
+      <text>{{item}}</text>
     </view>
   </view>
   <view class="shop">
-    <view class="pic">{{shop.img}}</view>
-    <view class="shop-name">{{shop.name}}</view>
-    <view class="shop-info">{{shop.introduce}}</view>
+    <image class="shop-img shop-item" src="{{shop.img}}" />
+    <view class="shop-item">
+      <view class="shop-name">{{shop.name}}</view>
+      <view class="shop-introduce">{{shop.introduce}}</view>
+    </view>
+    <view class="shop-in shop-item">进入店铺></view>
   </view>
   <view class="evaluate">
     <view class="evaluate-title">商品评价({{evaluate.num}})</view>
