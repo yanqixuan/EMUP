@@ -117,3 +117,82 @@ img {
   width: 120rpx;
   height: 120rpx;
 }
+
+/* evaluate */
+.evaluate{
+  box-sizing: border-box;
+  padding: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.evaluate-title{
+  color: #bfbfbf;
+}
+.evaluate-percent{
+  font-size: 90%;
+  color: #bfbfbf;
+}
+.evaluate-rate{
+  color: gold;
+}
+/* detail */
+.details{
+  margin-bottom: 500rpx;
+}
+
+/* foot */
+.foot{
+  height: 130rpx;
+  /* line-height: 150rpx; */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.item{
+  /* flex: .6; */
+  display: flex;
+  flex-direction: row;
+}
+.foot-item{
+  /* flex: 1; */
+  font-size:80%;
+  /* width: 100rpx; */
+  padding: 20rpx;
+  /* display: inline-block; */
+  text-align: center;
+  margin: 0 auto;
+}
+.foot image{
+  display: block;
+  margin: 0 auto;
+  width: 50rpx;
+  height: 50rpx;
+}
+.buy{
+  flex: 1;
+}
+.buy-item{
+  height: 100%;
+  display: flex;
+}
+.buy-add{
+  display: flex;
+  align-items:center;
+  height: 100%;
+  background-color: gold;
+  justify-content: center;
+  flex: .5;
+}
+.purchase{
+  display: flex;
+  align-items:center;
+  height: 100%;
+  color: #fff;
+  background-color: black;
+  justify-content: center;
+  flex: .5;
+}

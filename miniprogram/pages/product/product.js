@@ -47,10 +47,8 @@ Page({
           '//p.qpic.cn/qqumall/0/15373331635ba1d7ab34047.jpg/0',
           '//p.qpic.cn/qqumall/0/15373331635ba1d7ab364a7.jpg/0',
           '//p.qpic.cn/qqumall/0/15453596065c1c50f6f1128.jpg/0'
-        ]
-
-      
-  
+        ],
+        empty:false
 },
 
   /**
