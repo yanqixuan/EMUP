@@ -21,10 +21,9 @@
   </view>
   <view class="info">
     <view class="postage">邮费 {{info.postage}}</view>
-    <view class="type">{{info.type}}</view>
-    <view class="server" wx:for="{{info.server}}" wx:key="index">
-      <image src="" />
-      {{item}}
+    <view class="postage">已选 {{info.type}}</view>
+    <view class="postage server" wx:for="{{info.server}}" wx:key="index">
+      <image src="../../images/dui.png" /> <text > {{item}}</text> 
     </view>
   </view>
   <view class="shop">

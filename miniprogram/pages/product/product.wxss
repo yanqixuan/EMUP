@@ -50,6 +50,30 @@ img{
 }
 .oldPrice{
   text-decoration-line: line-through;
+  font-size: 70%;
+  color: #bfbfbf;
+}
+
+/* info */
+.info{
+  border-bottom: 20rpx solid #f1f1f1;
+  width: 100%;
+}
+.postage{
+  
+  border-bottom: 1px solid #f1f1f1;
+  padding: 20rpx 20rpx 20rpx 0;
+  margin-left: 20rpx;
   font-size: 60%;
   color: #bfbfbf;
+}
+.server{
+  vertical-align: middle;
+  display: inline-block;
+}
+.postage image{
+  position: relative;
+  transform: translateY(5rpx);
+  width: 30rpx;
+  height: 30rpx;
 }
