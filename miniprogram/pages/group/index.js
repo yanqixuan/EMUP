@@ -7,201 +7,8 @@ Page({
   data: {
     toView: "",
     curId: "",
-    leftList: [
-      {
-        name: '',
-        select: true,
-        list: [
-          {
-            title: "推荐",
-            id: "tuijian"
-          }
-        ]
-      },
-      {
-        name: "作品",
-        select: false,
-        list: [
-          {
-            title: "影视",
-            id: "yinshi"
-          },
-          {
-            title: "形象",
-            id: "xingxiang"
-          },
-          {
-            title: "动漫",
-            id: "dongman"
-          },
-          {
-            title: "文化",
-            id: "wenhua"
-          },
-          {
-            title: "潮流/综艺",
-            id: "chaoliu"
-          },
-          {
-            title: "游戏",
-            id: "youxi"
-          }
-        ]
-      },
-      {
-        name: "商品",
-        select: false,
-        list: [
-          {
-            title: "男女服饰",
-            id: "nannvfushi"
-          },
-          {
-            title: "数码配件",
-            id: "shumapeijian"
-          },
-          {
-            title: "生活家居",
-            id: "shenghuojiaju"
-          },
-          {
-            title: "鞋帽配饰",
-            id: "xiemaopeoshi"
-          },
-          {
-            title: "玩具手办",
-            id: "wanjushouban"
-          },
-          {
-            title: "箱包收纳",
-            id: "xiangbaoshouna"
-          },
-          {
-            title: "首饰配件",
-            id: "shoushipeijian"
-          },
-          {
-            title: "美妆个护",
-            id: "meizhuanggehu"
-          },
-          {
-            title: "休闲食品",
-            id: "xiuxianshipin"
-          },
-          {
-            title: "文体图书",
-            id: "wentitushu"
-          },
-
-        ]
-      }
-    ],
-    rightList: [
-      {
-        title: "—— 独家正品 ——",
-        id: "tuijian",
-        isProduct: false,
-        list: [
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          }
-        ]
-      },
-      {
-        title: "—— 人气类目 ——",
-        id: "人气类目",
-        isProduct: true,
-        list: [
-          {
-            img: 'http://imgcache.gtimg.cn/ACT/svip_act/act_img/public/201809/1535964204_bag.png',
-            name: '背包'
-          },
-          {
-            img: 'http://imgcache.gtimg.cn/ACT/svip_act/act_img/public/201809/1535964204_bag.png',
-            name: '背包'
-          },
-          {
-            img: 'http://imgcache.gtimg.cn/ACT/svip_act/act_img/public/201809/1535964204_bag.png',
-            name: '背包'
-          },
-          {
-            img: 'https://p.qpic.cn/qqumall/0/15542058905ca34cc243426.png/0',
-            name: 'U形枕'
-          },
-          {
-            img: 'https://p.qpic.cn/qqumall/0/15542058905ca34cc243426.png/0',
-            name: 'U形枕'
-          },
-          {
-            img: 'https://p.qpic.cn/qqumall/0/15542058905ca34cc243426.png/0',
-            name: 'U形枕'
-          },
-        ]
-      },
-      {
-        title: "—— 影视 ——",
-        id: "yinshi",
-        list: [
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          },
-          {
-            img: 'http://p.qpic.cn/qqumall/0/15244568995add5dc3a1f4b.png/0',
-            name: '怪奇鹅'
-          }
-        ]
-      }
-    ]
+    leftList: [],
+    rightList: []
   },
   switch(event) {
     // console.log(event);
@@ -215,12 +22,31 @@ Page({
     // console.log(event);
     let st = event.detail.scrollTop
     // console.log(st)
-    if(st>396)
-    {
+    if (st > 3160) {
+      this.setData({
+        curId: "youxi"
+      })
+    } else if (st > 2612) {
+      this.setData({
+        curId: "chaoliuzongyi"
+      })
+    } else if (st > 2064) {
+      this.setData({
+        curId: "wenhua"
+      })
+    } else if (st > 1516) {
+      this.setData({
+        curId: "dongman"
+      })
+    } else if (st > 968) {
+      this.setData({
+        curId: "xingxiang"
+      })
+    } else if (st > 396) {
       this.setData({
         curId: "yinshi"
       })
-    } else if(st>0) {
+    } else if (st > 0) {
       this.setData({
         curId: 'tuijian'
       })
@@ -230,7 +56,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ce49f32d66f474c5b3a024e/emup/group',
+      data: {},
+      header: { 'content-type': 'application/json' },
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result) => {
+        console.log(result.data.data.leftList)
+        let leftList = result.data.data.leftList;
+        let rightList = result.data.data.rightList;
+        this.setData({
+          leftList,
+          rightList
+        })
+      },
+      fail: () => { },
+      complete: () => { }
+    });
   },
 
   /**
@@ -245,7 +89,7 @@ Page({
    */
   onShow: function () {
     this.setData({
-      curId:'tuijian'
+      curId: 'tuijian'
     })
   },
 
