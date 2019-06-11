@@ -90,11 +90,11 @@ Page({
   },
   toProduct(e){
     let id = e.currentTarget.dataset.id;
-    console.log(e)
+    // console.log(e)
     wx.navigateTo({
       url: '../product/product?id='+id,
       success: (result)=>{
-        
+        // console.log(result)
         // wx.setStorageSync('id', id);
       },
       fail: ()=>{},
