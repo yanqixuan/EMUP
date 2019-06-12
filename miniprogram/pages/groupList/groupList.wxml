@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="top">
+    <image src="{{img}}" mode="widthFix"/>
+  </view>
+  <view class="header">
+    <view class="title">{{title}}</view>
+    <view class="introduce">{{introduce}}</view>
+  </view>
+  <view class="productList">
+    <view class="product" wx:for="{{productList}}" wx:key="index">
+      <image src="{{item.img}}" mode="widthFix" />
+      <view class="name">{{item.name}}</view>
+      <view class="price">￥{{item.price}}</view>
+    </view>
+  </view>
+</view>

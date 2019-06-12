@@ -1,0 +1,47 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.top img {
+  width: 100%;
+}
+
+.header {
+  margin: 20rpx;
+}
+
+.header .title {
+  font-size: 110%;
+}
+
+.header .introduce {
+  font-size: 80%;
+  color: rgb(100, 99, 99);
+}
+
+.productList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  margin-bottom: 20rpx;
+}
+
+.product image {
+  width: 100%;
+}
+
+.name {
+  font-size: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
