@@ -19,7 +19,8 @@
       <view class="rightList" wx:for="{{rightList}}" wx:key="index" id="{{item.id}}">
         <view class="rightList-name">{{item.title}}</view>
         <view class="rightList-list {{item.isProduct === true ? 'product':''}}">
-          <view class="rightList-list-product" wx:for="{{item.list}}" wx:key="itemIndex" wx:for-item="itemList">
+          <view class="rightList-list-product" bind:tap="toProductList" 
+          wx:for="{{item.list}}" wx:key="itemIndex" wx:for-item="itemList" data-pid="{{itemList.id}}">
             <image src="{{itemList.img}}" />
             <h5 >{{itemList.name}}</h5>
           </view>

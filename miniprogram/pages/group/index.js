@@ -10,6 +10,18 @@ Page({
     leftList: [],
     rightList: []
   },
+  toProductList(event){
+    // console.log(event.currentTarget.dataset.pid)
+    let pid = event.currentTarget.dataset.pid
+    wx.navigateTo({
+      url: '../groupList/groupList?pid='+pid,
+      success: (result)=>{
+        
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
   switch(event) {
     // console.log(event);
     this.setData({
@@ -64,7 +76,7 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: (result) => {
-        console.log(result.data.data.leftList)
+        // console.log(result.data.data.leftList)
         let leftList = result.data.data.leftList;
         let rightList = result.data.data.rightList;
         this.setData({
