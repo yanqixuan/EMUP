@@ -28,30 +28,30 @@
     </view>
   </view>
   <view class="shop">
-    <image class="shop-img shop-item" src="{{shop.img}}" />
+    <image class="shop-img shop-item" src="{{info.shop.img}}" />
     <view class="shop-item">
-      <view class="shop-name">{{shop.name}}</view>
-      <view class="shop-introduce">{{shop.introduce}}</view>
+      <view class="shop-name">{{info.shop.name}}</view>
+      <view class="shop-introduce">{{info.shop.introduce}}</view>
     </view>
     <view class="shop-in shop-item">进入店铺></view>
   </view>
   <view class="evaluate">
     <view>
       商品评价
-      <span class="evaluate-title">({{evaluate.num}})</span>
+      <span class="evaluate-title">({{info.evaluate.num}})</span>
     </view>
     <view class="evaluate-percent">
       好评率
-      <span class="evaluate-rate">{{evaluate.percent}}</span>
+      <span class="evaluate-rate">{{info.evaluate.percent}}</span>
       >
     </view>
   </view>
   <view class="promise">
-    <image src="{{promise.img}}" mode="widthFix" bind:tap="" />
+    <image src="{{info.promise}}" mode="widthFix" bind:tap="" />
   </view>
   <view class="details">
     <view class="details-title">商品详情</view>
-    <view class="details-pic" wx:for="{{details}}" wx:key="index">
+    <view class="details-pic" wx:for="{{info.details}}" wx:key="index">
       <image src="{{item}}" mode="widthFix" />
     </view>
     <!-- <image class="details-pic" wx:for="{{details}}" wx:key="index" /> -->
@@ -72,8 +72,8 @@
       </view>
     </view>
     <view class="buy" >
-      <view class="buy-item" wx:if="{{empty}}">已售空</view>
-      <view class="buy-item" wx:if="{{!empty}}">
+      <view class="buy-item" wx:if="{{info.empty}}">已售空</view>
+      <view class="buy-item" wx:if="{{!info.empty}}">
         <view class="buy-add " bindtap=""><view >加入购物车</view></view>
         <view class="purchase " bind:tap="">立即购买</view>
       </view>

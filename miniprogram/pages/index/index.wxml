@@ -111,7 +111,7 @@
         </text>
       </view>
       <view class="goodProduct-list">
-        <view class="goodProduct-list-item" wx:for="{{goodProductList}}" wx:key="index">
+        <view class="goodProduct-list-item" bindtap="toProduct" data-id="{{item.productID}}" wx:for="{{goodProductList}}" wx:key="index">
           <image src="{{item.img}}" />
           <view class="goodProduct-list-item_name">{{item.name}}</view>
           <view class="price">
@@ -127,7 +127,7 @@
     <view class="productLook">
       <view class="productLook-title">随心看看</view>
       <view class="productLook-item">
-        <view class="productLook-item-box" wx:for="{{productList}}" wx:key="index">
+        <view class="productLook-item-box" bindtap="toProduct" data-id="{{item.productID}}" wx:for="{{productList}}" wx:key="index">
           <view class="productLook-item-pic">
             <image src="{{item.img}}" />
           </view>

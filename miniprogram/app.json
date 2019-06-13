@@ -1,10 +1,11 @@
 {
-  "pages": ["pages/group/index",
+  "pages": ["pages/index/index",
+    "pages/group/index",
+    "pages/groupList/groupList",
     "pages/product/product",
-    "pages/index/index",
+    
     "pages/user/index",
     "pages/cart/index"
-    
     
   ],
   "cloud": true,
