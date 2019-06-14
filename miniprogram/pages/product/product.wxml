@@ -66,7 +66,7 @@
         <image src="../../images/客服.png" />
         客服
       </view>
-      <view class="foot-item" bindtap="">
+      <view class="foot-item" bindtap="add">
         <image src="../../images/购物车.png" />
         购物车
       </view>

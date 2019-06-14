@@ -4,6 +4,29 @@
       <view class="empty-text">空空如也的购物车，惆怅~</view>
       <view class="empty-button" bind:tap="go">去逛逛</view>
     </view>
+    <view wx:else class="cartProduct">
+      <view class="cartProduct-head">件宝贝等你带回家ヽ(✿ﾟ▽ﾟ)ノ</view>
+      <van-swipe-cell wx:for="{{cartProduct}}" wx:key="index" right-width="{{ 80 }}" left-width="{{ 1 }}">
+        <view class="cartProductItem">
+          <view class="cartProductItem-title">{{item.title}}</view>
+          <view class="product">
+            <view class="product-left">
+              <image src="{{item.img}}" mode="widthFix" />
+              <view class="name">{{item.name}}</view>
+              <view class="type">规格:{{item.type}}</view>
+              <view class="price">￥{{item.price}}</view>
+            </view>
+            <view class="product-right">
+              <van-stepper value="{{ 1 }}" bind:change="onChange" />
+            </view>
+          </view>
+        </view>
+        <view slot="right">
+          <span>移入收藏</span>
+          <span>删除</span>
+        </view>
+      </van-swipe-cell>
+    </view>
   </view>
   <view class="recommend">
     <view class="recommend-title">
@@ -20,8 +43,6 @@
     </view>
   </view>
   <view class="foot">
-    <view class="foot-content">
-      —— 全部加载完毕啦 (*/ω＼*) ——
-    </view>
+    <view class="foot-content">—— 全部加载完毕啦 (*/ω＼*) ——</view>
   </view>
 </view>

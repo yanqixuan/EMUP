@@ -1,70 +1,148 @@
-Page{
+Page {
     width: 100%;
     height: 100%;
 }
-.container{
+
+.container {
     background-color: #eeeded;
 }
-.cart{
+
+.cart {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400rpx;
     width: 100%;
     background-color: #fff;
     margin-bottom: 20rpx;
 }
-.empty{
+
+.empty {
+    height: 400rpx;
     background-color: #fff;
 }
-.empty-text{
+
+.empty-text {
     padding-bottom: 20rpx;
 }
-.empty-button{
+
+.empty-button {
     width: 200rpx;
     color: #FFC03A;
     border: 1px solid #FFC03A;
     text-align: center;
     margin: 0 auto;
 }
-.recommend{
+
+.recommend {
     text-align: center;
     align-items: center;
     width: 100%;
     background-color: #fff;
 }
-.recommend-title{
+
+.recommend-title {
     /* border: 1px solid #000; */
     line-height: 100rpx;
     height: 100rpx;
 }
-.recommend-productList{
+
+.recommend-productList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.recommend-product{
+
+.recommend-product {
     flex: 50%;
     width: 320rpx;
     padding-bottom: 30rpx;
 }
-.recommend-product image{
+
+.recommend-product image {
     height: 360rpx;
     width: 360rpx;
     /* flex: 50%; */
 }
-.recommend-info{
+
+.recommend-info {
     text-align: left;
 }
-.recommend-name{
+
+.recommend-name {
     white-space: nowrap;
     /* line-clamp: 1; */
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.foot{
+
+.foot {
     width: 100%;
     text-align: center;
     background-color: #fff;
     padding: 30rpx;
+}
+
+/* cartProduct */
+
+.cartProduct {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+van-swipe-cell {
+    z-index: 10;
+    width: 100%;
+}
+
+/* cartProductItem */
+
+.cartProductItem {}
+
+.cartProductItem-title{
+    border-top: 20rpx solid #eeeded;
+    line-height: 80rpx;
+    font-size: 90%;
+    border-bottom: 1px solid #000;
+}
+.cartProductItem image {
+    float: left;
+    width: 200rpx;
+}
+
+van-stepper {
+    float: right;
+}
+
+.product {
+    margin-top: 10rpx;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.product-left {
+    /* flex: 1; */
+}
+
+.product-right {
+    right: 10rpx;
+    position: absolute;
+    bottom: 10rpx;
+}
+
+.name {
+    font-size: 80%;
+}
+
+.type {
+    font-size: 60%;
+}
+
+.price {
+    position: absolute;
+    bottom: 10rpx;
+    margin-left: 200rpx;
+    color: red;
 }
