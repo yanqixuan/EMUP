@@ -7,7 +7,7 @@ App({
     } else {
       wx.cloud.init({
         traceUser: true,
-        env:'http-http'
+        env:'http-product'
       })
     }
 

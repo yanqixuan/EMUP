@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    _id:'',
     img: [],
     name: '',
     num: '',
@@ -19,10 +20,27 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  add(){
+    
+  },
+  addProduct(){
+    // let that = this;
+    // console.log(this.data._id)
+    wx.cloud.callFunction({
+      name:'addProduct',
+      data:{
+        _id:this.data._id
+      },
+      success(res){
+        console.log("yes",res.result)
+        console.log(res.result.res)
+      },
+      fail:console.error
+    })
+  },
   onLoad: function (options) {
-    // let id = wx.getStorageSync('id');
-    // console.log(id);
-    console.log(options.id)
+    // console.log(this.data._id)
+    // console.log(options.id)
     let that = this;
     db.collection('productList')
       .where({
@@ -31,19 +49,15 @@ Page({
       .get({
         success(res) {
           let result = res.data[0]
-          console.log(res.data[0])
+          // console.log(res.data[0])
           that.setData({
+            _id:options.id,
             img: result.img,
             name: result.name,
             num: result.num,
             price: result.price,
             oldPrice: result.oldPrice,
             info: result.info,
-            // shop: result.shop,
-            // evaluate: result.evaluate,
-            // promise: result.promise,
-            // details: result.details,
-            // empty: result.empty
           })
         }
       })
