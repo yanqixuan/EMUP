@@ -9,12 +9,11 @@ Page({
    */
   data: {
     cartProduct: [{
-      // img: '//p.qpic.cn/qqumall/0/15373333205ba1d8486749e.jpg/slt01',
-      // title: '歪瓜旗舰店',
-      
-      // name: '歪瓜抽纸',
-      // type: '6包/提',
-      // price: '9.99'
+      img: '',
+      title: '',
+      name: '',
+      type: '',
+      price: ''
     }],
     products: []
   },

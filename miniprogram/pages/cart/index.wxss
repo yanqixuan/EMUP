@@ -146,3 +146,27 @@ van-stepper {
     margin-left: 200rpx;
     color: red;
 }
+
+.right{
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+}
+.right-shoucang{
+    color: #fff;
+    background-color: #FFC03A;
+    display: flex;
+    height: 100%;
+    line-height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex: 50%;
+}
+.right-delete{
+    color: #fff;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:50%
+}
