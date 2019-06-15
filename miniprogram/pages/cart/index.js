@@ -1,20 +1,24 @@
 // miniprogram/pages/cart/index.js
+const db = wx.cloud.database({
+  env: 'http-product'
+})
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cartProduct:[{
-      title:'歪瓜旗舰店',
-      img:'//p.qpic.cn/qqumall/0/15373333205ba1d8486749e.jpg/slt01',
-      name:'歪瓜抽纸',
-      type:'6包/提',
-      price:'9.99'
+    cartProduct: [{
+      // img: '//p.qpic.cn/qqumall/0/15373333205ba1d8486749e.jpg/slt01',
+      // title: '歪瓜旗舰店',
+      
+      // name: '歪瓜抽纸',
+      // type: '6包/提',
+      // price: '9.99'
     }],
-    products:[]
+    products: []
   },
-  go(){
+  go() {
     wx.switchTab({
       url: '../index/index'
     });
@@ -26,19 +30,29 @@ Page({
     wx.request({
       url: 'https://www.easy-mock.com/mock/5ce49f32d66f474c5b3a024e/emup/cart',
       data: {},
-      header: {'content-type':'application/json'},
+      header: { 'content-type': 'application/json' },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
-      success: (result)=>{
-        console.log(result)
+      success: (result) => {
+        // console.log(result)
         this.setData({
-          products:result.data.data.products
+          products: result.data.data.products
         })
       },
-      fail: ()=>{},
-      complete: ()=>{}
+      fail: () => { },
+      complete: () => { }
     });
+
+    let that = this
+    db.collection('cart').get({
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          cartProduct:res.data
+        })
+      }
+    })
   },
 
   /**

@@ -1,6 +1,6 @@
 <view class="container">
   <view class="cart">
-    <view wx:if="{{!cartProduct}}" class="empty">
+    <view wx:if="{{cartProduct.length <= 0}}" class="empty">
       <view class="empty-text">空空如也的购物车，惆怅~</view>
       <view class="empty-button" bind:tap="go">去逛逛</view>
     </view>
