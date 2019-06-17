@@ -74,6 +74,7 @@
     <view class="buy" >
       <view class="buy-item" wx:if="{{info.empty}}">已售空</view>
       <view class="buy-item" wx:if="{{!info.empty}}">
+        <van-toast id="van-toast" />
         <view class="buy-add " bindtap="addProduct"><view >加入购物车</view></view>
         <view class="purchase " bind:tap="">立即购买</view>
       </view>

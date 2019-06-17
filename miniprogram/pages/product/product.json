@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "van-tag": "../dist/tag/index"
+    "van-tag": "../dist/tag/index",
+    "van-toast": "../dist/toast/index"
   }
 }

@@ -138,7 +138,28 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this
+    let promise = new Promise((resolve, reject) => {
+      db.collection('cart').get({
+        success(res) {
+          // console.log(res.data)
+          that.setData({
+            cartProduct: res.data
+          }),
+            resolve()
+        }
+      })
+    })
+    promise.then(() => {
+      let cartProduct = this.data.cartProduct
+      for (let i = 0; i < cartProduct.length; i++) {
+        cartProduct[i].totalPrice =cartProduct[i].price* cartProduct[i].num
+      }
+      this.setData({
+        cartProduct,
+        number:cartProduct.length
+      })
+    })
   },
 
   /**

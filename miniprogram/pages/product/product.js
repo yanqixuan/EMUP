@@ -1,4 +1,5 @@
 // miniprogram/pages/product/product.js
+import Toast from '../dist/toast/toast';
 const db = wx.cloud.database({
   env: 'http-product'
 })
@@ -32,8 +33,9 @@ Page({
         _id:this.data._id
       },
       success(res){
-        console.log("yes",res.result)
-        console.log(res.result.res)
+        Toast.success('加入成功');
+        // console.log("yes",res.result)
+        // console.log(res.result.res)
       },
       fail:console.error
     })
