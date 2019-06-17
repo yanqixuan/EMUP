@@ -23,6 +23,7 @@ exports.main = async (event, context) => {
     const type = res.data[0].info.type;
     const price = res.data[0].price;
     const title = res.data[0].info.shop.name;
+    const picture = res.data[0].picture;
 
     // let resAdd = 
     await cart.add({
@@ -32,6 +33,7 @@ exports.main = async (event, context) => {
       type,
       price,
       title,
+      picture,
       num: 1
     }
     })
@@ -49,9 +51,6 @@ exports.main = async (event, context) => {
 
 
   return {
-    // resAdd,
-    // resSelect,
-    // res,
     __id,
     event,
     openid: wxContext.OPENID,

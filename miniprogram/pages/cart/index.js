@@ -8,14 +8,73 @@ Page({
    * 页面的初始数据
    */
   data: {
+    number:0,
     cartProduct: [{
-      img: '',
+      _id: '',
+      picture: '',
       title: '',
       name: '',
       type: '',
-      price: ''
+      price: '',
+      totalPrice:0,
+      num: 1
     }],
     products: []
+  },
+  minus(event) {
+    let cartProduct = this.data.cartProduct
+    let index = event.target.dataset.index;
+    cartProduct[index].num--;
+    let id = event.target.id;
+    let num = cartProduct[index].num;
+    // let price = cartProduct[index].price * num;
+    cartProduct[index].totalPrice =cartProduct[index].price* num
+    this.setData({
+      cartProduct
+    })
+    // console.log(event.target.id, event.target.dataset.index)
+
+    // console.log(num)
+    // console.log(this.data)
+    wx.cloud.callFunction({
+      name: 'changeNum',
+      data: {
+        flag: 0,
+        id,
+        index,
+        num
+      },
+      success(res) {
+        // console.log(res.result)
+      }
+    })
+  },
+  plus(event) {
+    let cartProduct = this.data.cartProduct
+    let index = event.target.dataset.index;
+    cartProduct[index].num++;
+    let id = event.target.id;
+    let num = cartProduct[index].num;
+    cartProduct[index].totalPrice =cartProduct[index].price* num
+    this.setData({
+      cartProduct
+    })
+    // console.log(event.target.id, event.target.dataset.index)
+
+    // console.log(num)
+    // console.log(this.data)
+    wx.cloud.callFunction({
+      name: 'changeNum',
+      data: {
+        flag: 1,
+        id,
+        index,
+        num
+      },
+      success(res) {
+        console.log(res.result.rrr.data)
+      }
+    })
   },
   go() {
     wx.switchTab({
@@ -44,14 +103,28 @@ Page({
     });
 
     let that = this
-    db.collection('cart').get({
-      success(res) {
-        console.log(res.data)
-        that.setData({
-          cartProduct:res.data
-        })
-      }
+    let promise = new Promise((resolve, reject) => {
+      db.collection('cart').get({
+        success(res) {
+          // console.log(res.data)
+          that.setData({
+            cartProduct: res.data
+          }),
+            resolve()
+        }
+      })
     })
+    promise.then(() => {
+      let cartProduct = this.data.cartProduct
+      for (let i = 0; i < cartProduct.length; i++) {
+        cartProduct[i].totalPrice =cartProduct[i].price* cartProduct[i].num
+      }
+      this.setData({
+        cartProduct,
+        number:cartProduct.length
+      })
+    })
+
   },
 
   /**
