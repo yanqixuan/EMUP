@@ -86,6 +86,10 @@ Page({
       this.setData({
         active:1
       })
+    } else {
+      this.setData({
+        active:2
+      })
     }
   },
   toProduct(e){

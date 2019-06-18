@@ -173,6 +173,8 @@ van-stepper {
     /* justify-content: center; */
 }
 .right-shoucang{
+    box-sizing: border-box;
+    padding: 0 10rpx 0 10rpx;
     color: #fff;
     background-color: #FFC03A;
     display: flex;

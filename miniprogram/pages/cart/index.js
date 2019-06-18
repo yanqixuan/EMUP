@@ -1,4 +1,5 @@
 // miniprogram/pages/cart/index.js
+import Dialog from '../dist/dialog/dialog';
 const db = wx.cloud.database({
   env: 'http-product'
 })
@@ -8,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    number:0,
+    number: 0,
     cartProduct: [{
       _id: '',
       picture: '',
@@ -16,10 +17,34 @@ Page({
       name: '',
       type: '',
       price: '',
-      totalPrice:0,
+      totalPrice: 0,
       num: 1
     }],
     products: []
+  },
+  setdata(){
+    let that = this
+    let promise = new Promise((resolve, reject) => {
+      db.collection('cart').get({
+        success(res) {
+          // console.log(res.data)
+          that.setData({
+            cartProduct: res.data
+          }),
+            resolve()
+        }
+      })
+    })
+    promise.then(() => {
+      let cartProduct = this.data.cartProduct
+      for (let i = 0; i < cartProduct.length; i++) {
+        cartProduct[i].totalPrice = cartProduct[i].price * cartProduct[i].num
+      }
+      this.setData({
+        cartProduct,
+        number: cartProduct.length
+      })
+    })
   },
   minus(event) {
     let cartProduct = this.data.cartProduct
@@ -28,7 +53,7 @@ Page({
     let id = event.target.id;
     let num = cartProduct[index].num;
     // let price = cartProduct[index].price * num;
-    cartProduct[index].totalPrice =cartProduct[index].price* num
+    cartProduct[index].totalPrice = cartProduct[index].price * num
     this.setData({
       cartProduct
     })
@@ -55,7 +80,7 @@ Page({
     cartProduct[index].num++;
     let id = event.target.id;
     let num = cartProduct[index].num;
-    cartProduct[index].totalPrice =cartProduct[index].price* num
+    cartProduct[index].totalPrice = cartProduct[index].price * num
     this.setData({
       cartProduct
     })
@@ -80,6 +105,30 @@ Page({
     wx.switchTab({
       url: '../index/index'
     });
+  },
+  delete(event) {
+    let that = this;
+    Dialog.confirm({
+      title: '提示',
+      message: '确认删除此商品吗'
+    }).then(() => {
+      let id = event.target.id;
+      console.log(id)
+      wx.cloud.callFunction({
+        name: 'delete',
+        data: {
+          id
+        },
+        success(res){
+          that.setdata()
+          console.log(res)
+        }
+      })
+      // on confirm
+    }).catch(() => {
+      // on cancel
+    });
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -117,11 +166,11 @@ Page({
     promise.then(() => {
       let cartProduct = this.data.cartProduct
       for (let i = 0; i < cartProduct.length; i++) {
-        cartProduct[i].totalPrice =cartProduct[i].price* cartProduct[i].num
+        cartProduct[i].totalPrice = cartProduct[i].price * cartProduct[i].num
       }
       this.setData({
         cartProduct,
-        number:cartProduct.length
+        number: cartProduct.length
       })
     })
 
@@ -153,11 +202,11 @@ Page({
     promise.then(() => {
       let cartProduct = this.data.cartProduct
       for (let i = 0; i < cartProduct.length; i++) {
-        cartProduct[i].totalPrice =cartProduct[i].price* cartProduct[i].num
+        cartProduct[i].totalPrice = cartProduct[i].price * cartProduct[i].num
       }
       this.setData({
         cartProduct,
-        number:cartProduct.length
+        number: cartProduct.length
       })
     })
   },
