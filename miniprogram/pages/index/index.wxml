@@ -23,15 +23,13 @@
     </view>
     <view class="head">
       <!-- <van-search class="search" shape="round" input-align="center" value="{{}}" placeholder="搜索商品，5000多款好物" /> -->
-      <swiper indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="{{true}}" circular="{{true}}">
-        <block wx:for="{{headImgUrl}}" wx:key="{{index}}">
-          <swiper-item>
-            <image src="{{item}}" />
+      <swiper indicator-dots="{{true}}" indicator-color="#ffffff" autoplay="{{true}}" circular="{{true}}" style='height:{{Height}}'>
+          <swiper-item wx:for="{{headImg}}" wx:key="{{index}}" >
+            <image src="{{item}}" mode="widthFix" bindload="imgHeight" />
           </swiper-item>
-        </block>
       </swiper>
       <view class="title-tabBar">
-        <view class="title-tabBar-item" wx:for="{{titleTabBar}}" wx:key="{{index}}">
+        <view class="title-tabBar-item" wx:for="{{titleTabBarImg}}" wx:key="{{index}}">
           <view>
             <image src="{{item.img}}" />
           </view>

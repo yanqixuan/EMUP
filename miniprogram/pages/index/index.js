@@ -1,9 +1,28 @@
 const app = getApp()
 Page({
   data: {
+    Height:0,
     inputShowed: false,
-    headImgUrl: [],
+    headImg: ['../../images/sailiya.png','../../images/juhuasuan.png'],
     titleTabBar: [],
+    titleTabBarImg:[
+      {
+        img:'../../images/icon/icon-test.png',
+        text:'9.9起'
+      },
+      {
+        img:'../../images/icon/icon-test_1.png',
+        text:'新品会'
+      },
+      {
+        img:'../../images/icon/icon-test_2.png',
+        text:'大家买'
+      },
+      {
+        img:'../../images/icon/icon-test_3.png',
+        text:'手办营'
+      },
+    ],
     msTitle: [],
     hotGroup: [],
     goodProductList: [],
@@ -12,7 +31,18 @@ Page({
     hour: 0,
     minute: 0,
     second: 0,
-    
+
+  },
+  imgHeight(e) {
+    var winWid = wx.getSystemInfoSync().windowWidth; //获取当前屏幕的宽度
+    var imgh = e.detail.height;//图片高度
+    var imgw = e.detail.width;//图片宽度
+    var swiperH = winWid * imgh / imgw + 'px'
+    // let imgh=e.detail.height + 'rpx';//图片高度
+    console.log(e, winWid, swiperH)
+    this.setData({
+      Height: swiperH
+    })
   },
   time() {
     let now = new Date();
@@ -50,8 +80,8 @@ Page({
         minute,
         second
       })
-    } else{
-      time1 += 24*3600000;
+    } else {
+      time1 += 24 * 3600000;
       let hour = parseInt((time1 - time) / 3600000);
       let minute = parseInt((time1 - time - hour * 3600000) / 60000);
       let second = parseInt((time1 - time - hour * 3600000 - minute * 60000) / 1000);
@@ -75,34 +105,34 @@ Page({
     let time3 = now.setHours(20, 0, 0);
     if (time < time1) {
       this.setData({
-        active:2
+        active: 2
       })
     } else if (time < time2) {
       this.setData({
-        active:0
+        active: 0
       })
 
-    } else if (time < time3){
+    } else if (time < time3) {
       this.setData({
-        active:1
+        active: 1
       })
     } else {
       this.setData({
-        active:2
+        active: 2
       })
     }
   },
-  toProduct(e){
+  toProduct(e) {
     let id = e.currentTarget.dataset.id;
     // console.log(e)
     wx.navigateTo({
-      url: '../product/product?id='+id,
-      success: (result)=>{
+      url: '../product/product?id=' + id,
+      success: (result) => {
         // console.log(result)
         // wx.setStorageSync('id', id);
       },
-      fail: ()=>{},
-      complete: ()=>{}
+      fail: () => { },
+      complete: () => { }
     });
   },
   onLoad() {

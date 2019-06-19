@@ -5,6 +5,10 @@
 .head{
   border-bottom: 20rpx solid #efefef;
 }
+swiper{
+  /* height: 86.66666px; */
+  width: 100%;
+}
 .name{
   overflow: hidden;
   white-space: nowrap;
