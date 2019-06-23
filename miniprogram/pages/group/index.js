@@ -23,12 +23,10 @@ Page({
     });
   },
   switch(event) {
-    // console.log(event);
     this.setData({
       toView: event.target.dataset.id,
       curId: event.target.dataset.id
     })
-    // console.log(this.data.curId,event.target.dataset.id,this.data.leftList);
   },
   scrollTab(event) {
     // console.log(event);

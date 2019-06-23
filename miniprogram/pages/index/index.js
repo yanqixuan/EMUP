@@ -38,7 +38,6 @@ Page({
     var imgh = e.detail.height;//图片高度
     var imgw = e.detail.width;//图片宽度
     var swiperH = winWid * imgh / imgw + 'px'
-    // let imgh=e.detail.height + 'rpx';//图片高度
     console.log(e, winWid, swiperH)
     this.setData({
       Height: swiperH
@@ -92,10 +91,6 @@ Page({
         second
       })
     }
-
-    // console.log(now.getTime());
-    // console.log(now.getMinutes());
-    // console.log(time1,time2,time3,time);
   },
   active() {
     let now = new Date();
@@ -126,13 +121,7 @@ Page({
     let id = e.currentTarget.dataset.id;
     // console.log(e)
     wx.navigateTo({
-      url: '../product/product?id=' + id,
-      success: (result) => {
-        // console.log(result)
-        // wx.setStorageSync('id', id);
-      },
-      fail: () => { },
-      complete: () => { }
+      url: '../product/product?id=' + id
     });
   },
   onLoad() {
