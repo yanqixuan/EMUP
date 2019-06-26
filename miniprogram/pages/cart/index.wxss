@@ -17,10 +17,15 @@ Page {
 }
 
 .empty {
+    display: flex;
     height: 400rpx;
     background-color: #fff;
+    align-items: center;
+    justify-content: center;
 }
-
+.empty-content{
+    
+}
 .empty-text {
     padding-bottom: 20rpx;
 }

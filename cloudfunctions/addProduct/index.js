@@ -24,8 +24,6 @@ exports.main = async (event, context) => {
     const price = res.data[0].price;
     const title = res.data[0].info.shop.name;
     const picture = res.data[0].picture;
-
-    // let resAdd = 
     await cart.add({
     data: {
       _id: __id,
@@ -37,7 +35,6 @@ exports.main = async (event, context) => {
       num: 1
     }
     })
-
   } else {
     await cart.where({
       _id: __id
@@ -47,9 +44,6 @@ exports.main = async (event, context) => {
       }
     })
   }
-
-
-
   return {
     __id,
     event,

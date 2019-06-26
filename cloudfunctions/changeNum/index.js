@@ -1,6 +1,5 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-
 cloud.init()
 const db = cloud.database({
   env: 'http-product'
@@ -25,16 +24,10 @@ exports.main = async (event, context) => {
       fail: console.error
     })
   }
-  // let index = event.index;
-  // let num = event.num;
-
-  let rrr = await db.collection('cart').doc(id).get();
-
+  // let rrr = await db.collection('cart').doc(id).get();
   return {
     event,
-    rrr,
-    // id,
-    // num,
+    // rrr,
     openid: wxContext.OPENID,
     appid: wxContext.APPID,
     unionid: wxContext.UNIONID,

@@ -34,7 +34,6 @@
 .right{
     float: right;
     width: 550rpx;
-    /* margin-left: 200rpx; */
 }
 .scrollRight{
     padding-left: 20rpx;
@@ -45,17 +44,13 @@
     padding: 20rpx 0;
     box-sizing: border-box;
     margin-left: -40rpx;
-    /* -left: -10rpx; */
 }
 .rightList-list{
-    /* width: 550rpx; */
-    /* text-align: center; */
     display: flex;
     flex-wrap: wrap;
 }
 .rightList-list-product{
     padding: 20rpx 10rpx;
-    text-align: center;
     align-items: center;
     width: 150rpx;
 }

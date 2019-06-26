@@ -4,7 +4,6 @@ const db = wx.cloud.database({
   env: 'http-product'
 })
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -27,7 +26,6 @@ Page({
     let promise = new Promise((resolve, reject) => {
       db.collection('cart').get({
         success(res) {
-          // console.log(res.data)
           that.setData({
             cartProduct: res.data
           }),
@@ -52,15 +50,10 @@ Page({
     cartProduct[index].num--;
     let id = event.target.id;
     let num = cartProduct[index].num;
-    // let price = cartProduct[index].price * num;
     cartProduct[index].totalPrice = cartProduct[index].price * num
     this.setData({
       cartProduct
     })
-    // console.log(event.target.id, event.target.dataset.index)
-
-    // console.log(num)
-    // console.log(this.data)
     wx.cloud.callFunction({
       name: 'changeNum',
       data: {
@@ -68,9 +61,6 @@ Page({
         id,
         index,
         num
-      },
-      success(res) {
-        // console.log(res.result)
       }
     })
   },
@@ -84,10 +74,6 @@ Page({
     this.setData({
       cartProduct
     })
-    // console.log(event.target.id, event.target.dataset.index)
-
-    // console.log(num)
-    // console.log(this.data)
     wx.cloud.callFunction({
       name: 'changeNum',
       data: {
@@ -95,9 +81,6 @@ Page({
         id,
         index,
         num
-      },
-      success(res) {
-        console.log(res.result.rrr.data)
       }
     })
   },

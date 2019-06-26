@@ -82,18 +82,10 @@
           <view class="hot-item" wx:for="{{hotGroup}}" wx:key="index">
             <view class="hot-item-pic">
               <image src="{{item.img}}" />
-              <view wx:if="{{!item.img}}" class="cn">查看更多</view>
             </view>
             <view class="hot-item-text">
               <text>{{item.name}}
               {{item.num}}款</text>
-            </view>
-          </view>
-          <view class="hot-item">
-            <view class="hot-item-pic">
-              <!-- 查看更多 -->
-              <view class="cn">查看更多</view>
-              <view class="en">MORE</view>
             </view>
           </view>
         </scroll-view>
