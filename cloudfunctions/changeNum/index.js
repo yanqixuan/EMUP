@@ -10,14 +10,14 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   let id = event.id;
   if (event.flag === 0) {
-    db.collection('cart').doc(id).update({
+    await db.collection('cart').doc(id).update({
       data: {
         num: _.inc(-1)
       },
       fail: console.error
     })
   } else {
-    db.collection('cart').doc(id).update({
+    await db.collection('cart').doc(id).update({
       data: {
         num: _.inc(1)
       },
