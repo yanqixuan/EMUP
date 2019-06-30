@@ -28,8 +28,6 @@ Page({
     });
   },
   addProduct(){
-    // let that = this;
-    // console.log(this.data._id)
     wx.cloud.callFunction({
       name:'addProduct',
       data:{
@@ -37,8 +35,6 @@ Page({
       },
       success(res){
         Toast.success('加入成功');
-        // console.log("yes",res.result)
-        // console.log(res.result.res)
       },
       fail:console.error
     })

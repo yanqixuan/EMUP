@@ -24,10 +24,8 @@ exports.main = async (event, context) => {
       fail: console.error
     })
   }
-  // let rrr = await db.collection('cart').doc(id).get();
   return {
     event,
-    // rrr,
     openid: wxContext.OPENID,
     appid: wxContext.APPID,
     unionid: wxContext.UNIONID,
