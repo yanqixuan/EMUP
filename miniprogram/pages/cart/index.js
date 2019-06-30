@@ -46,18 +46,18 @@ Page({
   },
   minus(event) {
     let cartProduct = this.data.cartProduct
-    let index = event.target.dataset.index;
+    let index = event.target.dataset.index; //获取当前的index
     cartProduct[index].num--;
     let id = event.target.id;
     let num = cartProduct[index].num;
-    cartProduct[index].totalPrice = cartProduct[index].price * num
+    cartProduct[index].totalPrice = cartProduct[index].price * num  //设置更改后的总价
     this.setData({
       cartProduct
     })
     wx.cloud.callFunction({
       name: 'changeNum',
       data: {
-        flag: 0,
+        flag: 0,  //plus方法中 flag 为1
         id,
         index,
         num
@@ -107,9 +107,6 @@ Page({
           console.log(res)
         }
       })
-      // on confirm
-    }).catch(() => {
-      // on cancel
     });
 
   },
